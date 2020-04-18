@@ -1,13 +1,20 @@
 
   {
-   "comments": [
-     {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+   
+    "comments": [{
       "id": 1,
-      "title": "hello"
-    }
-  ],
-   "profile": [{
-    "name": "typicode"
+      "body": "nice picture"
+    }],
+  
+    "photos": [{
+    "caption": "asdfghjklo",
+    "likes":0,
+    "commentcount":0
    }]
+ 
   }
 
