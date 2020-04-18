@@ -1,20 +1,23 @@
 
   {
-    "id": 1,
-    "name": "Leanne Graham",
-    "username": "Bret",
-    "email": "Sincere@april.biz",
-   
-    "comments": [{
+    "user":[
+      {
       "id": 1,
-      "body": "nice picture"
-    }],
-  
-    "photos": [{
-    "caption": "asdfghjklo",
-    "likes":0,
-    "commentcount":0
-   }]
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "profilepic": ""
+      }
+     ],
+   
+    "photos": [
+      {
+      "id": 1,
+      "photoid":1
+      "comment": "nice picture",
+      "likes":0
+     }
+    ],
  
   }
 
