@@ -13,7 +13,7 @@
     "photos": [
       {
       "id": 1,
-      "photoid":1
+      "photoid":1,
       "comment": "nice picture",
       "likes":0
      }
