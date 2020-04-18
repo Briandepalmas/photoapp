@@ -1,11 +1,13 @@
-{
-  "posts": [
-    {
+[
+  {
+   "comments": [
+     {
       "id": 1,
       "title": "hello"
     }
   ],
-  "profile": {
+   "profile": [{
     "name": "typicode"
+   }]
   }
-}
+]
