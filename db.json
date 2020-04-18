@@ -8,6 +8,15 @@
       "email": "Sincere@april.biz",
       "profilepic": ""
       }
+     ],
+  "photos":[
+      {
+      "id": 1,
+      "photoid": 1,
+      "likes": 0,
+      "comment":"nice picture",
+      "profilepic": ""
+      }
      ]
   } 
   
