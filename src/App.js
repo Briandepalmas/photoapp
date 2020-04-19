@@ -10,23 +10,42 @@ constructor(props){
 }
 
 componentDidMount(){
-  let payload = {
-    token: "MclNmUrYSrRhFAB7tNMsyg",
-    data: {
-      name: "nameFirst",
-      email: "internetEmail",
-      phone: "phoneHome",
-      _repeat: 5
-    }
-  };
+
+
+
+   axios.get("http://my-json-server.typicode.com/briandepalmas/photoapp/db")
+
+
+
+ .then(response => {
+console.log(response.data)
+ })
+
+ .catch(error =>{
+  console.log('there is an error', error)
+})
+
+
+
+
+//   let payload = {
+//     token: "MclNmUrYSrRhFAB7tNMsyg",
+//     data: {
+//       name: "nameFirst",
+//       email: "internetEmail",
+//       phone: "phoneHome",
+//       _repeat: 5
+//     }
+//   };
   
-  axios({
-  method: "post",
-  url: "https://app.fakejson.com/q",
-  data: payload
-  }).then(function(resp) {
-  // Do something with fake data
-  });
+//   axios({
+//   method: "post",
+//   url: "https://app.fakejson.com/q",
+//   data: payload
+//   }).then(function(response) {
+//   // Do something with fake data
+// console.log("llll",response.data)
+//   });
 }
 
 
