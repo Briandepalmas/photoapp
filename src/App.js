@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Route,Switch, Link , BrowserRouter as Router} from 'react-router-dom';
 import axios from 'axios'
 
 export default class App extends Component {
@@ -13,47 +14,33 @@ componentDidMount(){
 
 
 
-   //axios.get("http://my-json-server.typicode.com/briandepalmas/photoapp/db")
+   axios.get("http://my-json-server.typicode.com/briandepalmas/photoapp/db")
 
 
 
  .then(response => {
-console.log(response.data)
- })
+     console.log(response.data)
+   })
 
- .catch(error =>{
-  console.log('there is an error', error)
-})
+   .catch(error => {
+     console.log('there is an error', error)
+   })
 
-
-
-
-//   let payload = {
-//     token: "MclNmUrYSrRhFAB7tNMsyg",
-//     data: {
-//       name: "nameFirst",
-//       email: "internetEmail",
-//       phone: "phoneHome",
-//       _repeat: 5
-//     }
-//   };
-  
-//   axios({
-//   method: "post",
-//   url: "https://app.fakejson.com/q",
-//   data: payload
-//   }).then(function(response) {
-//   // Do something with fake data
-// console.log("llll",response.data)
-//   });
-}
+ }
 
 
   render() {
     return (
-      <div>
-        
-      </div>
+      <Router>
+         <div>
+          <nav>
+           <Link to="/">Home </Link>
+           <Link to="/profile">Profile </Link>
+           <Link to="/favorites">Favorites</Link>
+          </nav>
+        </div>
+      </Router>  
+       
     )
   }
 }
