@@ -13,7 +13,7 @@ componentDidMount(){
 
 
 
-   axios.get("http://my-json-server.typicode.com/briandepalmas/photoapp/db")
+   //axios.get("http://my-json-server.typicode.com/briandepalmas/photoapp/db")
 
 
 
