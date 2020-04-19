@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import {Route,Switch, Link , BrowserRouter as Router} from 'react-router-dom';
+import Signup from './components/Signup'
+import Profile from './components/Profile'
+import Favorites from './components/Favorites'
+import Home from './components/Home'
 import axios from 'axios'
 
 export default class App extends Component {
@@ -20,10 +24,10 @@ componentDidMount(){
    })
  
    //add user
-   addUser(){}
+  //  addUser(){}
 
  
-  }
+   }
 
 
 
@@ -31,13 +35,21 @@ componentDidMount(){
     return (
       <Router>
          <div>
+           <Signup/>
           <nav>
            <Link to="/signup">SIGN UP </Link>
            <Link to="/home">Home </Link>
            <Link to="/profile">Profile </Link>
            <Link to="/favorites">Favorites</Link>
           </nav>
-        </div>
+
+        <Switch>
+         <Route exact path="/signup" component={Signup} />
+         <Route exact path="/home" component={Home} />
+         <Route exact path="/profile" component={Profile} />
+         <Route exact path="/favorites" component={Favorites} />
+        </Switch>
+         </div>
       </Router>  
        
     )
