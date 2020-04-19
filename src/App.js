@@ -24,7 +24,17 @@ componentDidMount(){
    })
  
    //add user
-  //  addUser(){}
+    addUser(username,password){
+      axios.post("http://my-json-server.typicode.com/briandepalmas/photoapp/user",{
+        username:username,
+        password:password,
+        online:false
+      })
+      .then(response =>{
+        response.data.id=2;
+        this.setState({ data: [...this.state.data.user, res.data] })
+      })
+    }
 
  
    }
