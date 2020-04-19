@@ -6,8 +6,8 @@
       "name": "Leanne Graham",
       "username": "Bret",
       "password": "abc123",
-      "email": "Sincere@april.biz",
-      "profilepic": ""
+      "profilepic": "",
+      "online":false
       }
      ],
   "photos":[

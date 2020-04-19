@@ -17,7 +17,7 @@ constructor(props){
 componentDidMount(){
   axios.get("http://my-json-server.typicode.com/briandepalmas/photoapp/db")
   .then(response => {this.setState({data:response.data.user})
-     console.log(this.state.data[0].name)
+     console.log(this.state.data)
    })
    .catch(error => {
      console.log('there is an error', error)
@@ -35,7 +35,7 @@ componentDidMount(){
     return (
       <Router>
          <div>
-           <Signup/>
+           {/* <Signup/> */}
           <nav>
            <Link to="/signup">SIGN UP </Link>
            <Link to="/home">Home </Link>
@@ -45,9 +45,9 @@ componentDidMount(){
 
         <Switch>
          <Route exact path="/signup" component={Signup} />
-         <Route exact path="/home" component={Home} />
+         {/* <Route exact path="/home" component={Home} />
          <Route exact path="/profile" component={Profile} />
-         <Route exact path="/favorites" component={Favorites} />
+         <Route exact path="/favorites" component={Favorites} /> */}
         </Switch>
          </div>
       </Router>  
