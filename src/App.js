@@ -4,7 +4,7 @@ import Signup from './components/Signup'
 import Profile from './components/Profile'
 import Favorites from './components/Favorites'
 import Home from './components/Home'
-import axios from 'axios'
+//import axios from 'axios'
 
 export default class App extends Component {
 constructor(props){
@@ -64,25 +64,43 @@ constructor(props){
   //    console.log('there is an error', error)
   //  })
      
-  
+  loggedIn =(username,password)=>{
+    this.setState({
+      user: this.state.user.map(user => {
+        if(user.username===username&&user.password===password){
+          console.log("you are online")
+          user.online=!user.online
+          return user;
+        }else{
+          console.log("wrong password")
+        }
+        
+      })
+    })
+  }
 
 
 
   render() {
+this.state.user.map((user) => 
+console.log(user.id)
+
+)
+
     return (
       <Router>
          <div>
            {/* how to pass function as prop without rendering component? */}
            {/* <Signup addUser={this.addUser}/> */}
           <nav>
-           <Link to="/signup">SIGN UP </Link>
+           {/* <Link to="/signup">SIGN UP </Link> */}
            <Link to="/home">Home </Link>
            <Link to="/profile">Profile </Link>
            <Link to="/favorites">Favorites</Link>
           </nav>
 
         <Switch>
-         <Route exact path="/signup" component={Signup} />
+         {/* <Route exact path="/signup" component={Signup} /> */}
          {/* <Route exact path="/home" component={Home} />
          <Route exact path="/profile" component={Profile} />
          <Route exact path="/favorites" component={Favorites} /> */}
