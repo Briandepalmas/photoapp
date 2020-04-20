@@ -10,27 +10,42 @@ export default class App extends Component {
 constructor(props){
   super(props);
     this.state={
-      user:{
-        "id": 1,
-        "username": "Bret",
-        "password": "abc123",
-        "profilepic": "",
-        "online":false
+      user:[
+      {
+        id: 1,
+        username: "brian",
+        password: "abc123",
+        profilepic: "",
+        online:false
+      },
+      {
+        id: 2,
+        username: "sabrina",
+        password: "123abc",
+        profilepic: "",
+        online:false
+      },
+      {
+        id: 3,
+        username: "palma",
+        password: "809",
+        profilepic: "",
+        online:false
       }
-    }
+    ]
+  }
 }
 
-componentDidMount(){
-  axios.get("http://my-json-server.typicode.com/briandepalmas/photoapp/db")
-  .then(response => {this.setState({userInfo:response.data})
-     console.log(this.state.userInfo)
-   })
-   .catch(error => {
-     console.log('there is an error', error)
-   })
-  }
+// componentDidMount(){
+//   axios.get("http://my-json-server.typicode.com/briandepalmas/photoapp/db")
+//   .then(response => {this.setState({userInfo:response.data})
+//      console.log(this.state.userInfo)
+//    })
+//    .catch(error => {
+//      console.log('there is an error', error)
+//    })
+//   }
   
-
   //add user not functional
   //    addUser(username,password) { 
   //     //  console.log(username , password)
