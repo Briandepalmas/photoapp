@@ -10,7 +10,13 @@ export default class App extends Component {
 constructor(props){
   super(props);
     this.state={
-      userInfo:[]
+      user:{
+        "id": 1,
+        "username": "Bret",
+        "password": "abc123",
+        "profilepic": "",
+        "online":false
+      }
     }
 }
 
@@ -23,19 +29,26 @@ componentDidMount(){
      console.log('there is an error', error)
    })
   }
-   //add user
-     addUser(username,password) { 
-       console.log(username , password)
-      //  axios.post("http://my-json-server.typicode.com/briandepalmas/photoapp", {
-      //      username: username,
-      //      password: password,
-      //      online: false
-      //    })
-      //    .then(response =>
-      //      this.setState({data: [...this.state.data, response.data.user]})
-      //      ,console.log("neww",this.state.data)
-      //    );
-     }
+  
+
+  //add user not functional
+  //    addUser(username,password) { 
+  //     //  console.log(username , password)
+  //      axios.post("http://my-json-server.typicode.com/briandepalmas/photoapp/user", {
+  //           username:username,
+  //           password:password,
+  //          "profilepic": "url",
+  //          online: false
+  //        })
+  //        .then(response =>
+  //         console.log(response.data)
+  //         //  this.setState({userInfo: [...this.state.userInfo, response.data]})
+  //         //  ,console.log("neww",this.state.userInfo)
+  //        )
+  //        .catch(error => {
+  //    console.log('there is an error', error)
+  //  })
+     
   
 
 
@@ -44,16 +57,17 @@ componentDidMount(){
     return (
       <Router>
          <div>
-           <Signup addUser={this.addUser}/>
+           {/* how to pass function as prop without rendering component? */}
+           {/* <Signup addUser={this.addUser}/> */}
           <nav>
-           {/* <Link to="/signup">SIGN UP </Link> */}
+           <Link to="/signup">SIGN UP </Link>
            <Link to="/home">Home </Link>
            <Link to="/profile">Profile </Link>
            <Link to="/favorites">Favorites</Link>
           </nav>
 
         <Switch>
-         {/* <Route exact path="/signup" component={Signup} /> */}
+         <Route exact path="/signup" component={Signup} />
          {/* <Route exact path="/home" component={Home} />
          <Route exact path="/profile" component={Profile} />
          <Route exact path="/favorites" component={Favorites} /> */}

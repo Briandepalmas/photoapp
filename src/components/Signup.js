@@ -3,23 +3,27 @@ import React, { Component } from 'react'
 export class Signup extends Component {
 //component state not being share as props
     state={
-        username:'',
-        password:''
+             username:"",
+             password:""    
     }
+   
     onSubmit = (event) => {
         event.preventDefault();
-        this.props.addUser(this.state.username);
-        this.props.addUser(this.state.password)
+        console.log(this.state.username)
+        this.props.addUser(this.state.username, this.state.password);
+        
         //resets username and password back to empty to receive new user input
-       // this.setState({ username: '',password:'' });
+        this.setState({ username: '',password:'' });
       }
 
-      //targets name of input forms username and password
-    onChange = (event) => this.setState({ [event.target.name]: event.target.value });
+      //targets name of input forms username and password and 
+    onChange = (event) => ({[event.target.name]: event.target.value });
+   // this.setState({user:{[event.target.name]: event.target.value ,}})
+    // ({ user:{[event.target.name]: event.target.value }});
     
     render() {
         return (
-            
+           
             <form onSubmit={this.onSubmit}>
                 Create UserName: 
                 <input type="text" name="username" placeholder="username" value={this.state.username}
@@ -29,7 +33,7 @@ export class Signup extends Component {
                 <input type="text" name="password" placeholder="enter password" value={this.state.password}
                 onChange={this.onChange}/>
                 
-                <input type="submit" value="submit"></input>
+                <input type="submit" ></input>
             </form>
         )
     }
