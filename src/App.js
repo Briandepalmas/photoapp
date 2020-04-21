@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import {Route,Switch, Link , BrowserRouter as Router} from 'react-router-dom';
-import Signup from './components/Signup'
+import Login from './components/Login'
 import Profile from './components/Profile'
 import Favorites from './components/Favorites'
 import Home from './components/Home'
+import './App.css'
 //import axios from 'axios'
 
 export default class App extends Component {
@@ -72,7 +73,7 @@ constructor(props){
           user.online=!user.online
           return user;
         }else{
-          console.log("wrong password")
+          console.log("wrong password try again")
         }
         
       })
@@ -82,28 +83,31 @@ constructor(props){
 
 
   render() {
-this.state.user.map((user) => 
-console.log(user.id)
+// this.state.user.map((user) => 
+// console.log(user.id)
 
-)
+// )
 
     return (
       <Router>
          <div>
            {/* how to pass function as prop without rendering component? */}
-           {/* <Signup addUser={this.addUser}/> */}
+           {/* <Login log={this.loggedIn}/> */}
           <nav>
-           {/* <Link to="/signup">SIGN UP </Link> */}
-           <Link to="/home">Home </Link>
-           <Link to="/profile">Profile </Link>
-           <Link to="/favorites">Favorites</Link>
+            <h1>
+              <Link to="/login">Login </Link>
+              <Link to="/home">Home </Link>
+              <Link to="/profile">Profile </Link>
+              <Link to="/favorites">Favorites</Link>
+            </h1>
+           
           </nav>
 
         <Switch>
-         {/* <Route exact path="/signup" component={Signup} /> */}
-         {/* <Route exact path="/home" component={Home} />
+         <Route exact path="/login" component={Login} />
+         {/* <Route exact path="/home" component={Home} /> */}
          <Route exact path="/profile" component={Profile} />
-         <Route exact path="/favorites" component={Favorites} /> */}
+         {/* <Route exact path="/favorites" component={Favorites} /> */}
         </Switch>
          </div>
       </Router>  

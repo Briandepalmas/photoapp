@@ -1,0 +1,30 @@
+.grid{
+    display:grid;
+    grid-template-columns: 100% 100% 100% 100% 100% 100%;
+    grid-template-rows:100% 100% 100% 100% 100% 100% ;
+  
+    color:white;
+    height: 200px;
+    width:250px;
+    margin-left: 20%;
+   
+
+}
+.item{
+    color:white;
+    background-color: blue;
+    margin-left:4px;
+    padding: 5px;
+}
+.profilepic{
+    display: flex
+}
+nav{
+ margin-left: 70%;
+}
+#ppic{
+    height: 160px;
+    width: 160px;
+    background-color: tomato;
+    border-radius: 50%;
+}
