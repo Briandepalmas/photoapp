@@ -17,21 +17,39 @@ constructor(props){
         username: "brian",
         password: "abc123",
         profilepic: "",
-        online:false
+        online:false,
+        photos:[{
+          photoid:1,
+          photoUrl:"",
+          comments:["nice","love it"],
+          likes:0 
+        }]
       },
       {
         id: 2,
         username: "sabrina",
         password: "123abc",
         profilepic: "",
-        online:false
+        online:false,
+        photos:[{
+          photoid:1,
+          photoUrl:"ayoo",
+          comments:["wowwww","love it"],
+          likes:0       
+        }]
       },
       {
         id: 3,
         username: "palma",
         password: "809",
         profilepic: "",
-        online:false
+        online:false,
+        photos:[{
+          photoid:1,
+          photoUrl:"",
+          comments:["okeyy","i see"],
+          likes:0
+        }]
       }
     ]
   }
@@ -83,10 +101,10 @@ constructor(props){
 
 
   render() {
-// this.state.user.map((user) => 
-// console.log(user.id)
+this.state.user.map((user) => 
+console.log(user.photos[0].comments[1])
 
-// )
+)
 
     return (
       <Router>
@@ -100,8 +118,7 @@ constructor(props){
               <Link to="/profile">Profile </Link>
               <Link to="/favorites">Favorites</Link>
             </h1>
-           
-          </nav>
+           </nav>
 
         <Switch>
          <Route exact path="/login" component={Login} />
