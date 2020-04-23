@@ -2,7 +2,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## WIREFRAME
 
-![wireframe]()
+![wireframe](https://github.com/Briandepalmas/photoapp/blob/master/src/images/Screen%20Shot%202020-04-20%20at%207.33.53%20PM.png)
+![wireframe](https://github.com/Briandepalmas/photoapp/blob/master/src/images/Screen%20Shot%202020-04-20%20at%207.43.46%20PM.png)
+![wireframe](https://github.com/Briandepalmas/photoapp/blob/master/src/images/Screen%20Shot%202020-04-20%20at%207.52.23%20PM.png)
+![wireframe](https://github.com/Briandepalmas/photoapp/blob/master/src/images/Screen%20Shot%202020-04-20%20at%207.53.45%20PM.png)
 
 ### `npm start`
 
