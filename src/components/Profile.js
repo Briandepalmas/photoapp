@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 export default class Profile extends Component {
 
+     
+
     render() {
         return (
             <div>
@@ -12,9 +14,15 @@ export default class Profile extends Component {
                   </div>
                 </div>
                 <div className="grid">
-                  <div className="item"> 1</div>
-                  <div className="item"> 2</div>
-                  <div className="item"> 3</div>
+                  <div className="item"></div>
+                  <div className="item"></div>
+                  <div className="item"></div>
+                  <div className="item"></div>
+                  <div className="item"></div>
+                  <div className="item"></div>
+                  <div className="item"></div>
+                  <div className="item"></div>
+                  <div className="item"></div>
                 </div>
                 
             </div>

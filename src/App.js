@@ -34,7 +34,7 @@ constructor(props){
         photos:[{
           photoid:1,
           photoUrl:"ayoo",
-          comments:["wowwww","love it"],
+          comments:["wowwww","maybe"],
           likes:0       
         }]
       },
@@ -102,7 +102,7 @@ constructor(props){
 
   render() {
 this.state.user.map((user) => 
-console.log(user.photos[0].comments[1])
+console.log(user.photos[0].likes)
 
 )
 
